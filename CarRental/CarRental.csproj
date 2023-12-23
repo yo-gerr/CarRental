@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{135A68AC-3B34-47FA-A765-EE8F073A85F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarRental</RootNamespace>
+    <AssemblyName>CarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Account.cs" />
+    <Compile Include="Classes\Cars.cs" />
+    <Compile Include="Classes\Configuration.cs" />
+    <Compile Include="Classes\Rent.cs" />
+    <Compile Include="frmCarFullDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarFullDescription.Designer.cs">
+      <DependentUpon>frmCarFullDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCar.Designer.cs">
+      <DependentUpon>frmAddCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountSignIn.Designer.cs">
+      <DependentUpon>frmAccountSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccountSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccountSignUp.Designer.cs">
+      <DependentUpon>frmAccountSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarRental.Designer.cs">
+      <DependentUpon>frmCarRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRent.Designer.cs">
+      <DependentUpon>frmRent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCar.Designer.cs">
+      <DependentUpon>frmUpdateCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateRentCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateRentCar.Designer.cs">
+      <DependentUpon>frmUpdateRentCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAccountSignIn.resx">
+      <DependentUpon>frmAccountSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccountSignUp.resx">
+      <DependentUpon>frmAccountSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCar.resx">
+      <DependentUpon>frmAddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarFullDescription.resx">
+      <DependentUpon>frmCarFullDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarRental.resx">
+      <DependentUpon>frmCarRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRent.resx">
+      <DependentUpon>frmRent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCar.resx">
+      <DependentUpon>frmUpdateCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateRentCar.resx">
+      <DependentUpon>frmUpdateRentCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UncheckMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HidePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowPassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
